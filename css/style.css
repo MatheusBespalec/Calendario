@@ -1,0 +1,46 @@
+/*Reset*/
+*{
+	margin: 0;
+	height: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans',sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+/*BootClass*/
+
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+/*Table*/
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 50px;
+}
+
+table tr{
+	text-align: center;
+}
+
+table tr:nth-of-type(1){
+	background-color: #448aff;
+	font-weight: bolder;
+	color: #fff;
+}
+
+table td{
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+table td.select{
+	background-color: #ccc;
+}
