@@ -127,15 +127,25 @@
 				<?php
 					$n = 1;
 					$dia = 1;
+					$next = 1;
+					$prev = (cal_days_in_month(CAL_GREGORIAN, ($mes-1), $ano) - $diaInicialMes) + 1;
 
-					$diasDoMes+= $diaInicialMes;
-					while ($n <= $diasDoMes) {
+					$diasDoMesCount = $diaInicialMes + $diasDoMes;
+					while(($diasDoMesCount % 7) != 0){
+						$diasDoMesCount++;
+					}
+
+					while ($n <= $diasDoMesCount) {
 						if($n % 7 == 1){
 							echo '<tr>';
 						}
 
 						if ($n <= $diaInicialMes) {
-							echo '<td></td>';
+							echo '<td class="prev">'.$prev.'</td>';
+							$prev++;
+						}else if($dia > $diasDoMes){
+							echo '<td class="prev">'.$next.'</td>';
+							$next++;		
 						}else{
 							if($dia == $diaAtual)
 								echo '<td class="select">'.$dia.'</td>';

@@ -42,5 +42,9 @@ table td{
 }
 
 table td.select{
+	background-color: #ffc830;
+}
+
+table td.prev{
 	background-color: #ccc;
 }
